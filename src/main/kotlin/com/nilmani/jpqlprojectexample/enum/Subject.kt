@@ -9,4 +9,5 @@ enum class Subject(val type:Int) {
     PROGRAMMING(6),
     STATICS(7),
     CHEMISTRY(8),
+    HISTORY(9)
 }

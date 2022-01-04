@@ -7,5 +7,5 @@ data class ReqTeacher(
     val nameOfTeacher:String="",
     val price:Long=-1,
     val subject:Int= Subject.MATH.type,
-    val university:Int= University.OTHER.type
+    val university:Int= University.OTHER.type,
 )

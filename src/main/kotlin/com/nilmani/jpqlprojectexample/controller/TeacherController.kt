@@ -22,7 +22,7 @@ class TeacherController {
             nameOfTeacher = request.nameOfTeacher,
             price = request.price,
             subject = request.subject,
-            university = request.university
+            university = request.university,
         )
         val saveTeacher = teachRopo.save(newTeacher)
         val respTeacher = ResTeacher(

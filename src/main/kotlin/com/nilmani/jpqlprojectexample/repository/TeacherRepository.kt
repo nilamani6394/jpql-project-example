@@ -15,8 +15,13 @@ interface TeacherRepository : JpaRepository<Teacher,Long> {
 //    @Query("select MAX (t.price) from Teacher t where t.nameOfTeacher= :nameOfTeacher")
 //    fun getHighestSalary(@Param("nameOfTeacher")nameOfTeacher:String):List<Teacher>
     /**Write Jpql query to find the teachers name who teach Math*/
-    @Query("select t.nameOfTeacher from Teacher t where t.subject=1")
+    @Query("select t from Teacher t where t.subject=1")
     fun mathTeacher():List<Teacher>
 //    fun mathTeacher():List<Teacher>
+    /**Drop studentId column  from the teacher table*/
+  /**  @Transactional
+    @Modifying
+    @Query("update Teacher t  drop t.studentId")
+    fun drpStudentID():Long*/
     /**Find the Price and Teacher Name*/
 }
